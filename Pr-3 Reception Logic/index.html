@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reception Logic</title>
+</head>
+
+<body>
+    <!-- task-1  while-loop -->
+    <script>
+        let n = prompt("enter num :")
+        let i = 1;
+
+        while( i<=n ){
+            console.log(i);
+            i++;
+        }
+    </script>
+
+    <!-- task-2  while-loop -->
+    <!-- <script>
+        let n = prompt("enter num :");
+        let i=1;
+
+        while ( i <= n) {
+            if (i % 2 == 0) {
+                console.log(i);
+            }
+            i++;
+        }
+    </script> -->
+
+    <!-- task-3   do-while-loop -->
+    <!-- <script>
+        let n = prompt("enter num :");
+        let i = 1;
+
+        do {
+            if (i % 2 == 0) {
+                console.log();
+            }
+            else {
+                console.log(i);
+            }
+            i++;
+        } while (i <= n);
+    </script> -->
+
+    <!-- task-4  for-loop -->
+    <!-- <script>
+        let n = prompt("enter num :")
+        let i;
+
+        for(i=1; i<=n; i++){
+            console.log(i);
+        }
+    </script> -->
+
+    <!-- task-5 for-loop  -->
+    <!-- <script>
+        let n = prompt("enter num :");
+        let i;
+
+        for (i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                console.log(i);
+            }
+        }
+    </script> -->
+
+    <!-- task-6 do-while-loop  -->
+    <!-- <script>
+        let i = 1;
+        let sum = 0;
+        let n = parseInt(prompt("enter Number : "));
+
+        do {
+            sum += i;
+            console.log(i);
+            i++;
+        } while (i <= n);
+        console.log(" Sum is : ", sum);
+    </script> -->
+
+    <!-- task-7 while-loop  -->
+    <!-- <script>
+     let i = 1;
+      let n = parseInt(prompt("enter Number : "));
+
+      while(i <= 10){
+        console.log( n, i,  i*n);
+        i++;
+      }
+    </script> -->
+
+    <!-- task-8 do-while-loop  -->
+    <!-- <script>
+        let i = 1;
+        let n = parseInt(prompt("enter Number : "));
+
+        do {
+            console.log(n, i, i * n);
+            i++;
+        } while (i <= 10);
+
+    </script> -->
+
+    <!-- task- 9  for-loop -->
+    <!-- <script>
+         let n = parseInt(prompt("enter Number : "));
+
+      for(let i=1; i <= 10; i++){
+        console.log( n,  i,  n*i);
+      }
+    </script> -->
+
+    <!-- task-10 while-loop  -->
+    <!-- <script>
+        let i = 1;
+        let factorial_num = 1;
+        let n = parseInt(prompt("enter Number : "));
+
+        while (i <= n) {
+            factorial_num *= i;
+            console.log( i);
+            i++;
+        }
+
+        console.log(" factorial_num  is : ", factorial_num);
+    </script> -->
+
+    <!-- task-11 not-using-for-loop  -->
+    <!-- <script>
+        let num = parseInt(prompt("enter Number : "));
+        let cheack = 0;
+
+        for (let i = 2; i < num; i++) {
+            if (num % i == 0) {
+                cheack = 1;
+            }
+        }
+
+        if (cheack == 0) {
+            console.log(num, " Prime Number");
+        } else {
+            console.log(num, "Not Prime Number");
+        }
+
+    </script> -->
+
+    <!-- task-12  not-using-while-loop  -->
+    <!-- <script>
+    
+      let num = parseInt(prompt("Enter Any Number : "));
+      let cheack = 0;
+      let i = 2;
+
+      while(i < num){
+        if(num % i == 0){
+          cheack = 1;
+        }
+        i++;
+      }
+
+      if(cheack == 0){
+        console.log( num, "Prime Number");
+      }else{
+        console.log( num, "Not Prime Number");
+      }
+
+    </script> -->
+
+    <!-- task - 13  fibonacci -->
+    <!-- <script>
+        let num = parseInt(prompt('Enter number : '));
+        let a = 0, b = 1, c;
+
+        console.log('Fibonacci Series:');
+
+        for (let i = 1; i <= num; i++) {
+            console.log(a);
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    </script> -->
+
+
+</body>
+
+</html>
