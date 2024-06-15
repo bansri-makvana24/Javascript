@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>udf</title>
+</head>
+
+<body>
+    <!-- task-1  -->
+    <script>
+        let num = prompt("enter num :")
+
+        function name() {
+            if (num >= 0) {
+                console.log("positive num");
+            } else {
+                console.log("negative num");
+            }
+        }
+        name();
+    </script> 
+
+    <!-- task-2  -->
+     <!-- <script>
+        let a = parseInt(prompt("enter num:"));
+        let b = parseInt(prompt("enter num:"));
+
+        let sum = (a,b) => a + b;
+        let d = sum(a,b);
+        console.log(d);
+        if(d>=0){
+                console.log(" positive num ");
+            }
+            else{
+                console.log(" nagative num");
+            }
+    </script> -->
+
+    <!-- task-3  -->
+    <!-- <script>
+        let a = parseInt(prompt("Enter first number: "));
+        let b = parseInt(prompt("Enter second number: "));
+        let c = parseInt(prompt("Enter third number: "));
+        let d = parseInt(prompt("Enter four number: "));
+
+        function check() {
+
+            if (a >= b && a >= c && a >= d) {
+                console.log("greter num ", a)
+            }
+            else if (b >= a && b >= c && b >= d) {
+                console.log("greter num", b)
+            }
+            else if (c >= b && c >= a && c >= d) {
+                console.log("greter num ", c)
+            }
+            else {
+                console.log("greter num", d)
+            }
+        }
+        check();
+    </script> -->
+
+    <!-- task - 4  -->
+    <!-- <script>
+    let a = parseInt(prompt("Enter first number: "));
+        let b = parseInt(prompt("Enter second number: "));
+        let c = parseInt(prompt("Enter third number: "));
+        let d = parseInt(prompt("Enter four number: "));
+        
+    function check(a,b,c,d) {
+        
+        if (a >= b && a >= c && a >= d) {
+            console.log("greter num ", a)
+        }
+        if (b >= a && b >= c && b >= d) {
+            console.log("greter num", b)
+        }
+        if (c >= b && c >= a && c >= d) {
+            console.log("greter num ", c)
+        }
+        else {
+            console.log("greter num", d)
+        }
+    }
+    check(a,b,c,d);
+</script> -->
+
+    <!-- task - 5  -->
+    <!-- <script>
+        let a = parseInt(prompt("Enter first number: "));
+        let b = parseInt(prompt("Enter second number: "));
+
+        function sum() {
+            console.log("addition :-", a + b);
+            console.log("substration :-", a - b);
+            console.log("multiplication :-", a * b);
+            console.log("division :-", a / b);
+        }
+        sum();
+    </script> -->
+
+    <!-- task -6  -->
+    <!-- <script>
+         function swep() {
+        let a = parseInt(prompt("Enter first number: "));
+        let b = parseInt(prompt("Enter second number: "));
+           [b,a] = [a,b];
+           console.log(a);
+           console.log(b);
+    }
+    swep();
+     </script> -->
+
+    <!-- task -7  -->
+    <!-- <script>
+        let a = prompt("enter  number : ")
+        let b = prompt("enter  number : ")
+        let c = prompt("enter  number : ")
+
+
+        function check(x, y, z) {
+            if (x > y) {
+                if (x > z) {
+                    return "a is Greater"
+                } else {
+                    return "c is Greater"
+                }
+            } else {
+                if (y > z) {
+                    return "b is Greater"
+                } else {
+                    return "c is Greater"
+                }
+            }
+        }
+
+        let ans = check(a, b, c);
+        console.log(ans);
+    </script> -->
+
+    <!-- task - 8 -->
+    <!-- <script>
+    function result() {
+    let a = parseInt(prompt("enter value of a :"));
+    let b = parseInt(prompt("enter value of b :"));
+    let choice = prompt("enter choice + , - , / ,* :");
+    let ans;
+
+    switch(choice){
+        case '+': 
+        ans = a + b;
+        break;
+        case '-': 
+        ans = a - b;
+        break;
+        case '*': 
+        ans = a * b;
+        break;
+        case '/': 
+        ans = a / b;
+        break;
+    }
+    console.log(ans);
+  }
+  result()
+ </script> -->
+
+    <!-- task -9  -->
+    <!-- <script>
+     let angle_one =  parseInt(prompt("enter angle_one :"));
+        let angle_second =  parseInt(prompt("enter angle_second :"));
+        let angle_third =  parseInt(prompt("enter angle_third :"));
+
+        let total = angle_one + angle_second + angle_third;
+
+        let check = () => {
+            if( total === 180){
+            console.log("valid triangle");
+        } else {
+            console.log("invalid triangle");
+        }
+        }
+        check(total);
+ </script> -->
+
+    <!-- task - 10  -->
+    <!-- <script>
+        function vot() {
+            let age = prompt("age");
+            if (age < 18) {
+                console.log("invalid for vote");
+            } else if (age <= 18) {
+                console.log("valid for vote");
+            } else {
+                console.log("valid ");
+            }
+        }
+        vot();
+    </script> -->
+</body>
+
+</html>
