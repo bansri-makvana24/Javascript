@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>View Posts</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Srno</th>
+                    <th>images</th>
+                    <th>Title</th>
+                    <th>tag</th>
+                    <th rowspan="3">review</th>
+                    <th>images</th>
+
+                </tr>
+            </thead>
+            <tbody id="postsdata">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const getProduct = async () => {
+            try {
+                let record = await fetch('https://dummyjson.com/products');
+                let data = await record.json();
+                console.log(data);
+
+
+                let tbl = "";
+                data.products.map((p) => {
+                    tbl += `
+                                <tr>
+                                    <td>${p.id}</td>
+                                    <td><img src="${p.thumbnail}" height="100px"></td>
+                                    <td${p.title}td>
+                                    <td>${p.description.substr(0, 30)}</td>
+
+
+                                    <td>`
+                                        p.tags.map((tags) => {
+                                        tbl += `
+                                        ${tags}
+                                        `
+                                    })
+                                        tbl += `</td>
+
+
+                                     
+                                     <td>`
+                                        p.reviews.map((r) => {
+                                        tbl += `
+                                                ${r.rating}
+                                                ${r.comment}  
+                                                ${r.reviewerName}     
+                                        `
+                                    })
+                                        tbl += `</td>
+
+
+                                    
+                                     <td>`
+                                        p.images.map((images) => {
+                                        tbl += `
+                                        <img src="${images}" height="100px">
+                                        `
+                                    })
+                                        tbl += `</td>
+    
+
+                                </tr>
+
+
+                    `
+
+
+                })
+                document.getElementById('postsdata').innerHTML = tbl;
+            }
+            catch (err) {
+                console.log(err);
+                return false;
+            }
+        }
+        getProduct();
+    </script>
+ 
+</body>
+
+</html> 
+ 
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Products</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2 style="text-decoration: underline; color: rgb(35, 124, 214); font-size: 28px;">*- View Products -*</h2>
+        <table border="3" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+            <thead style="color: rgb(0, 166, 255); font-size: 21px;">
+                <tr>
+                    <th>ID</th>
+                    <th>Thumbnail</th>
+                    <th>Title</th>
+                    <th>Tags</th>
+                    <th>Reviews</th>
+                    <th>Images</th>
+                </tr>
+            </thead>
+            <tbody id="productsdata"></tbody>
+        </table>
+    </div>
+
+    <script>
+        fetch('https://dummyjson.com/products')
+            .then(response => response.json())
+            .then(data => {
+                let tbl = '';
+                data.products.map(product =>
+                    tbl += `
+                    <tr>
+                        <td>${product.id}</td>
+                        <td><img src="${product.thumbnail}" alt="Thumbnail" width="100"></td>
+                        <td>${product.title}</td>
+                        <td>${product.tags.map(tag => `${tag}`)}</td>
+                        <td>${product.reviews.map(review => `
+                            <div>
+                                <br>Review :- ${review.comment}<br>
+                                ReviewerName :- ${review.reviewerName}<br>
+                                Rating :- ${review.rating}<br><br>
+                            </div>
+                        `)}</td>
+                        <td>${product.images.map(image => `<img src="${image}" alt="Image" width="100">`)}</td>
+                    </tr>
+                `);
+
+                document.getElementById('productsdata').innerHTML = tbl;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+
+</html> -->
